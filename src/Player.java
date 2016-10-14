@@ -1,9 +1,15 @@
 // Player.java - Description
 
 public class Player {
+    private String name;
 
     public Player() {
-        // do shit
+        // player shit
+    }
+
+    public Player(String name) {
+        this.name = name;
     }
 
 }
+
