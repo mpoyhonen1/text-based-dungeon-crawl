@@ -27,10 +27,18 @@ public class Player {
     // Health
     public void setHealth(int health) {
         this.health = health;
+        checkHealth();
     }
 
     public int getHealth() {
         return health;
+    }
+    
+    public void checkHealth() {
+        if (health <= 0) {
+            // gameOver()
+            System.exit();
+        }
     }
 
     // Rooms Explored
@@ -38,6 +46,8 @@ public class Player {
         roomsExp.add(room);
     }
 
+    public String toString() {
+        return "\nName: " + name + "\nHealth: " + health + "\nLoot: " + loot + "\nRooms Explored: " + roomsExp;
 
 }
 
