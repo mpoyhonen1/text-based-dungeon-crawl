@@ -1,4 +1,3 @@
-// DungeonRoom.java - Description...
 
 public abstract class DungeonRoom {
     protected String name;

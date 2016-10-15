@@ -1,9 +1,9 @@
-// DungeonRoom.java - Description...
+// MonsterRoom.java - Description
 
-public abstract class DungeonRoom {
+public abstract class MonsterRoom {
     protected String name;
 	
-	public DungeonRoom(String name) {
+	public MonsterRoom(String name) {
         this.name = name;
 	}
 
