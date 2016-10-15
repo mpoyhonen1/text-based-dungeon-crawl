@@ -1,4 +1,4 @@
-// Player.java - Description
+// Player.java - Description..
 
 import java.util.*;
 
@@ -48,6 +48,7 @@ public class Player {
 
     public String toString() {
         return "\nName: " + name + "\nHealth: " + health + "\nLoot: " + loot + "\nRooms Explored: " + roomsExp;
+    }
 
 }
 
