@@ -25,8 +25,7 @@ public class MonsterRoom extends DungeonRoom {
 
 	@Override
 	public int getLoot() {
-		// return player.setLoot(player.getLoot() + loot);
-		return monster.getLoot();
+		return 0;
 	}
 
 	@Override

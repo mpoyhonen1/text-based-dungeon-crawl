@@ -3,22 +3,12 @@ package crawler;
 public class BigBoy extends Monster {
 	private static final int ATTACK_MAX = 20;
 	private static final int MAX_LOOT = 70;
-	private int damage, loot;
+	private int damage;
 
 	public BigBoy() {
 		super("BigBoy");
-	}
-
-	public int droppedLoot() {
-		// monster died
-		if (monsterDead()) {
-			loot = (int) (Math.random() * MAX_LOOT) + 20;
-			return loot;
-		}
-
-		// player died
-		loot = 0;
-		return loot;
+		loot = (int) (Math.random() * MAX_LOOT) + 20;
+		
 	}
 
 	public int damage() {

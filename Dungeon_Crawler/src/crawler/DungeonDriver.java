@@ -64,12 +64,15 @@ public class DungeonDriver {
 			DungeonRoom currentRoom = rooms[currentRoomIndex];
 			currentRoomIndex++;
 			System.out.println("You are in room #"+ currentRoomIndex);
-			
+			System.out.println("You have " + player.getHealth() + " health and " + player.getLoot() +" loot.");
 			Monster thisMonster = currentRoom.getMonster();
 			if(thisMonster != null ){
 				player.fight(thisMonster);
-				//Deal with loot after fighting with monster
-				
+			}
+			
+			if(currentRoom.getLoot() > 0) { 
+				System.out.println("You discover lost treasure worth " + currentRoom.getLoot() + " loot!");
+				player.setLoot(player.getLoot()+currentRoom.getLoot());
 			}
 			
 		}

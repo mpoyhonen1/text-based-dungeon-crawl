@@ -2,9 +2,10 @@ package crawler;
 
 public abstract class Monster {
 	private String name;
-	private int health, loot;
+	private int health;
 	Player player;
-
+	protected int loot;
+	
 	public Monster(String name) {
 		this.name = name;
 		this.health = 30;
@@ -27,20 +28,10 @@ public abstract class Monster {
 		health -= damage();
 	}
 	
-	public boolean monsterDead() {
-		if (health <= 0) {
-			return true;
-		}
-		
-		return false;
-	}
 
 	public abstract int damage();
 
-	public abstract int droppedLoot();
-	
 	public int getLoot() {
-		// return player.setLoot(player.getLoot() + loot);
 		return loot;
 	}
 	
